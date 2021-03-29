@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>organisation</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}"/>
+</head>
+<body>
+    
+   <nav class="navbar navbar-expand-lg navbar navbar-dark bg-dark">
+  <a class="navbar-brand" href="{{ url_for('index') }}">Home</a>
+  
+  <div class="collapse navbar-collapse" id="navbarText">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item ">
+        <a class="nav-link" href="{{ url_for('view_doctor')}}">Doctors</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="{{ url_for('view_patient') }}">Patients</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="{{ url_for('view_donor') }}">Donors</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="{{ url_for('review_transplants')}}">Review Transplantation</a>
+      </li>
+    </ul>
+    <span class="navbar-text">
+      {{ organisation_data[2] }}
+    </span>
+  </div>
+</nav>
+    
+
+    <div id="org_details">
+    
+    <h3>Name of Organisation : {{ organisation_data[2] }} </h3>
+    <h3>Organisation ID : {{ organisation_data[0] }} </h3>
+    <h3>Head of Organisation : {{ organisation_data[3] }} </h3>
+    <h3>Address : Office No.{{ organisation_data[4] }} ,Street No.{{ organisation_data[5] }} ,{{ organisation_data[6] }} ,{{ organisation_data[7] }}</h3>
+    
+    <br>
+    <br>
+
+    <h4>You are currently handling {{ organisation_data[8] }} donations</h4>
+    <h4>You are currently having {{ organisation_data[9]}} specialist doctors</h4>
+    
+    
+
+    
+    <p>{{ msg }}</p>
+   
+</div>
+</body>    
+</html>
