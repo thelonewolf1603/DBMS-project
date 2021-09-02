@@ -1,4 +1,4 @@
 # DBMS-project
 
+Organ Donation Management system
 
-sql password change kr lena
